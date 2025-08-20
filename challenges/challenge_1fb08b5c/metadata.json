@@ -1,0 +1,59 @@
+{
+    "title": "8-bit Ripple Carry Adder",
+    "description": "Design an 8-bit ripple carry adder with minimum gate delay and area. The adder should take two 8-bit inputs and a carry-in, producing an 8-bit sum and carry-out.",
+    "difficulty": "beginner",
+    "estimated_time_hours": 2,
+    "constraints": {
+      "inputs": [
+        "a[7:0]",
+        "b[7:0]", 
+        "cin"
+      ],
+      "outputs": [
+        "sum[7:0]",
+        "cout"
+      ],
+      "max_gate_count": 200,
+      "target_frequency_mhz": 100,
+      "technology": "generic"
+    },
+    "evaluation_metrics": {
+      "functionality": 0.5,
+      "delay": 0.2,
+      "area": 0.15,
+      "power": 0.15
+    },
+    "scoring_details": {
+      "functionality_description": "Must pass all test vectors correctly",
+      "delay_target_ns": 10.0,
+      "area_baseline_gates": 80,
+      "power_budget_mw": 50.0
+    },
+    "challenge_files": [
+      "specification.md",
+      "testbench.v",
+      "constraints.json",
+      "reference_impl.v"
+    ],
+    "submission_requirements": {
+      "file_format": "verilog",
+      "module_name": "adder_8bit",
+      "max_file_size_kb": 100,
+      "coding_style": "synthesizable_verilog_2005"
+    },
+    "bonus_objectives": [
+      {
+        "name": "ultra_low_delay", 
+        "description": "Achieve delay < 5ns",
+        "bonus_points": 0.1
+      },
+      {
+        "name": "minimal_area",
+        "description": "Use < 60 gates total", 
+        "bonus_points": 0.05
+      }
+    ],
+    "created_by": "Hardware Design Subnet",
+    "created_date": "2025-07-05",
+    "version": "1.0"
+  }
