@@ -1,0 +1,40 @@
+{
+  "timing_constraints": {
+    "clock_period_ns": 10.0,
+    "input_delay_ns": 0.5,
+    "output_delay_ns": 0.5,
+    "max_combinational_delay_ns": 9.0
+  },
+  "area_constraints": {
+    "max_gate_count": 200,
+    "target_gate_count": 80,
+    "gate_types_allowed": [
+      "AND2", "AND3", "AND4",
+      "OR2", "OR3", "OR4", 
+      "XOR2", "XOR3",
+      "NAND2", "NAND3", "NAND4",
+      "NOR2", "NOR3", "NOR4",
+      "NOT", "BUF"
+    ]
+  },
+  "power_constraints": {
+    "max_dynamic_power_mw": 50.0,
+    "target_dynamic_power_mw": 30.0,
+    "supply_voltage_v": 1.8,
+    "operating_frequency_mhz": 100
+  },
+  "synthesis_constraints": {
+    "technology_library": "generic",
+    "optimization_effort": "medium",
+    "area_vs_delay_priority": "balanced"
+  },
+  "design_rules": {
+    "module_name": "adder_8bit",
+    "port_naming": {
+      "inputs": ["a[7:0]", "b[7:0]", "cin"],
+      "outputs": ["sum[7:0]", "cout"]
+    },
+    "coding_style": "structural_or_dataflow",
+    "verilog_version": "2005"
+  }
+}
